@@ -1,0 +1,140 @@
+html {
+  font-family: 'Andale Mono', 'Monaco', 'Consolas', monospace;
+  font-size: 62.5%;
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+  background: #333333;
+  color: #dddddd;
+}
+body {
+  width: 90%;
+  max-width: 60rem;
+  margin: 3rem auto;
+  font-size: 1.3em;
+  line-height: 1.6;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+footer,
+header,
+nav,
+section,
+main {
+  display: block;
+}
+code {
+  font-family: 'Andale Mono', 'Monaco', 'Consolas', monospace;
+  font-size: 90%;
+  white-space: no-wrap;
+  background: #262626;
+  color: #aaaaaa;
+}
+pre {
+  background: #262626;
+  color: #aaaaaa;
+  padding: 2rem;
+  border-radius: .3rem;
+  overflow-x: scroll;
+}
+a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  color: #22ffbb;
+  text-decoration: none;
+}
+a:active,
+a:hover {
+  color: #dddddd;
+  text-decoration: underline;
+}
+b,
+strong {
+  font-weight: inherit;
+}
+b,
+strong {
+  font-weight: bolder;
+}
+template,
+[hidden] {
+  display: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Andale Mono', 'Monaco', 'Consolas', monospace;
+  font-weight: bold;
+  margin: 1rem 0;
+  letter-spacing: -0.1rem;
+  color: #ffffff;
+}
+hr {
+  height: 0;
+  margin: 2rem 0;
+  padding: 0;
+  line-height: 0;
+  border: none;
+  border-top: dotted #00885e 1px;
+}
+header h1 {
+  margin: 2rem 0;
+}
+header h1 a {
+  display: inline-block;
+  background: #22ffbb;
+  color: #333333;
+  padding: .25rem 1.5rem;
+  border-radius: .3rem;
+}
+header h1 a:hover {
+  background: #ffffff;
+  color: #000000;
+  text-decoration: none;
+}
+header,
+footer {
+  text-align: center;
+}
+header ul,
+footer ul,
+header li,
+footer li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+header li,
+footer li {
+  display: inline-block;
+  font-weight: bold;
+  padding: 0 1rem;
+}
+header p strong,
+footer p strong {
+  color: #ffffff;
+}
+main {
+  padding: 1rem 0;
+}
+main h2:before {
+  content: '\00a0';
+  display: inline-block;
+  width: 1rem;
+  height: 2rem;
+  vertical-align: middle;
+  background: #22ffbb;
+  margin: 0 1rem 0 0;
+  border-radius: .3rem;
+}
+main h3 {
+  font-weight: normal;
+  font-size: 1.4rem;
+  line-height: 1.8;
+  color: #fff;
+}

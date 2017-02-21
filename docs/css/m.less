@@ -1,0 +1,149 @@
+@color-fg 			: #ddd;
+@color-bg 			: #333;
+@color-primary 		: #2fb;
+
+@font-body 		: 'Andale Mono', 'Monaco', 'Consolas', monospace;
+@font-head 		: 'Andale Mono', 'Monaco', 'Consolas', monospace;
+@font-code 		: 'Andale Mono', 'Monaco', 'Consolas', monospace;
+
+@margin-size: 2rem;
+// @breakpoint-mobile: 580;
+// @mobile: ~"all and (max-width: @{breakpoint-mobile}px)";
+
+html {
+	font-family: @font-body;
+	font-size: 62.5%;
+	line-height: 1.15;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	box-sizing: border-box;
+	background: @color-bg;
+	color: @color-fg;
+}
+body {
+	width: 90%;
+	max-width: 60rem;
+	margin: 3rem auto;
+	font-size: 1.3em;
+	line-height: 1.6;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+footer, header, nav, section, main {
+	display: block;
+}
+
+code {
+	font-family: @font-code;
+	font-size: 90%;
+	white-space: no-wrap;
+
+	background: darken(@color-bg, 5%);
+	color: darken(@color-fg, 20%);
+
+}
+pre {
+	background: darken(@color-bg, 5%);
+	color: darken(@color-fg, 20%);
+	padding: @margin-size;
+	border-radius: .3rem;
+	overflow-x: scroll;
+}
+
+a {
+	background-color: transparent;
+	-webkit-text-decoration-skip: objects;
+	color: @color-primary;
+	text-decoration: none;
+}
+a:active, a:hover {
+	color: @color-fg;
+	text-decoration: underline;
+}
+b, strong { font-weight: inherit; }
+b, strong { font-weight: bolder; }
+
+template, [hidden] { display: none; }
+
+
+
+
+h1, h2, h3, h4 {
+	font-family: @font-head;
+	font-weight: bold;
+	margin: @margin-size/2 0;
+	letter-spacing: -.1rem;
+	color: lighten(@color-fg, 50%);
+}
+
+hr {
+	height: 0;
+	margin: @margin-size 0;
+	padding: 0;
+	line-height: 0;
+	border: none;
+	border-top: dotted darken(@color-primary, 30%) 1px;
+}
+
+
+header h1 {
+	margin: @margin-size 0;
+
+	a {
+		display: inline-block;
+		background: @color-primary;
+		color: @color-bg;
+		padding: .25rem 1.5rem;
+		border-radius: .3rem;
+
+		&:hover {
+			background: lighten(@color-fg, 50%);
+			color: darken(@color-bg, 50%);
+			text-decoration: none;
+		}
+	}
+}
+
+header, footer {
+	text-align: center;
+
+	ul, li {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	li {
+		display: inline-block;
+		font-weight: bold;
+		padding: 0 1rem;
+	}
+
+	p strong {
+		color: lighten(@color-fg, 50%);
+	}
+}
+main {
+	padding: @margin-size/2 0;
+
+	h2 {
+		&:before {
+			content: '\00a0';
+			display: inline-block;
+			width: 1rem;
+			height: 2rem;
+			vertical-align: middle;
+			background: @color-primary;
+			margin: 0 1rem 0 0;
+			border-radius: .3rem;
+		}
+	}
+	h3 {
+		font-weight: normal;
+		font-size: 1.4rem;
+		line-height: 1.8;
+		color: #fff;
+	}
+}

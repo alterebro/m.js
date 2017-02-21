@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>m.js</title>
+	<link rel="stylesheet" type="text/css" href="css/m.min.css" />
+</head>
+<body>
+
+<header>
+	<h1><a href="#/">m.js</a></h1>
+	<nav>
+		<ul>
+			<li><a href="#/">Overview</a></li>
+			<li><a href="#/page/request">Request</a></li>
+			<li><a href="#/page/router">Router</a></li>
+			<li><a href="#/page/template">Template</a></li>
+		</ul>
+	</nav>
+	<hr />
+</header>
+
+<main></main>
+<template id="tpl">
+	<section>
+		<h2><%= data.title %></h2>
+		<div class="desc"><%= data.description %></div>
+		<div class="example"><%= data.example %></div>
+	</section>
+</template>
+
+<footer>
+	<hr />
+	<p><strong>m.js</strong> by Jorge Moreno <a href="https://twitter.com/alterebro">@alterebro</a></p>
+</footer>
+
+<script type="text/javascript" src="js/m.min.js"></script>
+<script type="text/javascript">
+window.onload = function() {
+
+	m.req('data.json', function(data) {
+
+		function show(v) {
+			document.querySelector('main').innerHTML = tpl({ data : v })
+		}
+
+		var tpl = m.tpl(document.getElementById('tpl').innerHTML);
+		var router = m.run({
+		    '/': function() {
+				show( data['home'] );
+		    },
+			'/page/:page': function(page) {
+				show( data[page] );
+			}
+		});
+		router.start();
+
+		if ( location.href.indexOf('#') < 0 ) { router.go('/') }
+	});
+}
+</script>
+
+
+</body>
+</html>

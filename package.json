@@ -1,0 +1,29 @@
+{
+  "name": "m.js",
+  "version": "1.0.0",
+  "description": "Minimalistic library to prototype Single Page Applications as fast as lightning",
+  "main": "src/m.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alterebro/m.js.git"
+  },
+  "author": "Jorge Moreno, www.moro.es ( @alterebro )",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alterebro/m.js/issues"
+  },
+  "homepage": "https://github.com/alterebro/m.js#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.0.3",
+    "gulp-rename": "^1.2.2",
+    "gulp-sequence": "^0.4.6",
+    "gulp-uglify": "^2.0.1"
+  }
+}

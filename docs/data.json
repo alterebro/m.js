@@ -1,0 +1,22 @@
+{
+	"home" : {
+		"title" : "m.js",
+		"description": "<h3><strong>m.js</strong> (m as in mini, micro, minimal...) is a 1Kb, zero dependencies, minimalistic library to create single page applications and simple web prototypes as fast as lightning.</h3><p>The small m.js library has got only three utilities : <a href=\"#/page/request\">a request handler to create AJAX calls</a>, <a href=\"#/page/router\">a simple hash router</a> and <a href=\"#/page/template\">a micro template system</a>.</p><p>Its simplicity and small size makes <strong>m.js</strong> a perfect starting point\tto create a web prototype or SPA very quickly.</p><hr />\n",
+		"example" : "<h3>Quick Example:</h3><h4>HTML</h4><pre><code>&lt;a href=\"#/\"&gt;home&lt;/a&gt;\n&lt;a href=\"#/about\"&gt;about&lt;/a&gt;\n&lt;a href=\"#/user/michael\"&gt;user:michael&lt;/a&gt;</code></pre>\n<h4>JSON ( sample.json )</h4>\n<pre><code>{\n  \"home\" : \"this is home\",\n  \"about\" : \"about data\",\n  \"user\" : \"user string\"\n}</code></pre>\n<h4>JavaScript</h4>\n<pre><code>m.req('sample.json', function(data) {\n  var tpl = m.tpl('&lt;%= val %&gt;');\n  var router = m.run({\n    '/': function() {\n      console.log( tpl({val: data.home}) );\n    },\n    '/about': function() {\n      console.log( tpl({val: data.about}) );\n    },\n    '/user/:user': function(user) {\n      console.log( tpl({val: data.user + ', user: ' +user}) );\n    }\n  });\n  router.start();\n});\n</code></pre>\n"
+	},
+	"request" : {
+		"title" : "Request / m.req",
+		"description" : "<strong>m.req</strong> will create a simple asyncronous <code>GET</code> request using two parameters, the <code>url</code> to fetch and a <code>callback</code> function to execute when it finishes loading the url which also has got as parameter the output of the JSON file loaded as a JavaScript Object.",
+		"example" : "<pre><code>// This will fetch the data.json file and will log the contents on the console once its loaded.\nm.req('data.json', function(data) {\n  console.log( data );\n});</code></pre>"
+	},
+	"router" : {
+		"title" : "Router / m.run",
+		"description" : "\n<p><strong>m.run</strong> will take an object as an argument with the routes and the corresponding functions to execute when that route is matched. A router can be started or stopped with : <code>run.start()</code> and <code>run.stop()</code>, and you can also go to a defined route with <code>run.go(route)</code> ( i.e. <code>run.go('/about')</code> )\n</p>\n",
+		"example" : "\n<pre><code>var router = m.run({\n  '/': function() {\n    console.log('index / home route');\n  },\n  '/about': function() {\n    console.log('about route')\n  },\n  '/users/:user': function(id) {\n    console.log('users route, user is ' + id)\n  },\n  '/file/*path': function(path) {\n    console.log('file route, file path is ' + path)\n  }\n});\n\nrouter.start()</code></pre>\n"
+	},
+	"template" : {
+		"title" : "Template / m.tpl",
+		"description" : "\n<p><strong>m.tpl</strong>\twill interpolate or evaluate expressions using the underscore template syntax: <code>&lt;%= var %&gt;</code> interpolates and <code>&lt;% console.log(true) %&gt;</code> evaluates the code inside.\n</p>\n<p>The template can be prerendered or you can directly pass the data to the template function</p>\n",
+		"example" : "\n<pre><code>// Pre-rendering template\nvar tpl = m.tpl('&lt;%= val %&gt;');\nconsole.log( tpl({val: 'test'}) );\n\n// or passing directly the data: \nvar tpl = m.tpl('&lt;%= val %&gt;', {val: 'test'});\nconsole.log( tpl );</code></pre>\n"
+	}
+}

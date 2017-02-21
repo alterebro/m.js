@@ -1,8 +1,8 @@
 {
   "name": "m.js",
   "version": "1.0.0",
-  "description": "Minimalistic library to prototype Single Page Applications as fast as lightning",
-  "main": "src/m.js",
+  "description": "Minimalistic 1kb library to prototype Single Page Applications as fast as lightning",
+  "main": "dist/m.min.js",
   "directories": {
     "doc": "docs"
   },

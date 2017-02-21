@@ -86,7 +86,7 @@ router.start()
 ## Request
 
 ```javascript
-m.request('data.json', function(data) {
+m.req('data.json', function(data) {
   console.log( data );
 });
 ```

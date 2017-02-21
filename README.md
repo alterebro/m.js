@@ -92,3 +92,16 @@ m.req('data.json', function(data) {
 ```
 
 ---
+
+### Development
+
+The main file ( `m.js` ) is located on `/src` folder, once edited build the minified version and spread it with the gulp command
+
+```sh
+$ gulp
+```
+
+### Credits
+
+- The templating is inspired on the [Underscore.js templates](http://underscorejs.org/#template) as well as the micro templating implementation by John Resig ([http://ejohn.org/blog/javascript-micro-templating/](http://ejohn.org/blog/javascript-micro-templating/)).
+- The router is heavily based in the previous work of [@cheft](https://github.com/cheft) done in [minrouter](https://github.com/cheft/minrouter).

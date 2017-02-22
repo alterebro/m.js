@@ -3,9 +3,14 @@
 - **Minimalistic 1kb library to prototype Single Page Applications as fast as lightning**
 - Demo and docs :  **[https://alterebro.github.io/m.js/](https://alterebro.github.io/m.js/#/)**
 
+<p align="center"><br>
+<a href="https://alterebro.github.io/m.js/"><img src="https://alterebro.github.io/m.js/img/mjs.jpg" width="280" /></a><br>
+</p>
+
 **m.js** (m as in mini, micro, minimal...) is a 1Kb, zero dependencies, minimalistic library to create single page applications and simple web prototypes as fast as lightning.
 
 The small **m.js** library has got three utilities : a request handler to create AJAX calls, a simple hash router and a micro template system. Its simplicity and small size makes **m.js** a perfect starting point to create a web prototype or SPA very quickly.
+
 
 ### Quick Example:
 

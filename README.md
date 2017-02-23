@@ -54,7 +54,7 @@ m.req('sample.json', function(data) {
 
 ---
 
-## Template
+## Template / m.tpl
 
 Underscore-like micro template system [http://underscorejs.org/#template](http://underscorejs.org/#template)
 
@@ -68,7 +68,7 @@ var tpl = m.tpl('<%= val %>', {val: 'test'});
 console.log( tpl );
 ```
 
-## Router
+## Router / m.run
 
 Hash router using router rules like backbone [http://backbonejs.org/#Router-routes](http://backbonejs.org/#Router-routes)
 
@@ -88,7 +88,7 @@ var router = m.run({
 router.start()
 ```
 
-## Request
+## Request / m.req
 
 ```javascript
 m.req('data.json', function(data) {
